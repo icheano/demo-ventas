@@ -1,2 +1,2 @@
 # demo-ventas
-proyecto streamlit 
+proyecto streamlit #Proyecto de la materia fundamentos 
