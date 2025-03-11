@@ -1,0 +1,15 @@
+# prompt: imprimir dataframe usando streamlite
+
+import pandas as pd
+import streamlit as st
+
+# Asegúrate de que el archivo 'Salida final ventas.xlsx' esté en el entorno de ejecución de Colab.
+# Si lo subiste, no necesitas hacer nada más. Si está en Google Drive, monta tu Drive primero.
+
+try:
+  df = pd.read_excel('Salida final ventas.xlsx')
+  st.write(df) # Muestra el DataFrame usando Streamlit
+except FileNotFoundError:
+  st.error("Error: El archivo 'Salida final ventas.xlsx' no se encontró. Asegúrate de que el archivo esté en el directorio de trabajo o proporciona la ruta correcta.")
+except Exception as e:
+  st.error(f"Ocurrió un error: {e}")
